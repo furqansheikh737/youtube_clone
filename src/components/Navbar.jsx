@@ -3,6 +3,12 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import ytLogo from "../images/yt-logo.png";
 import ytLogoMobile from "../images/yt-logo-mobile.png";
 
+import { SlMenu } from "react-icons/sl";
+import { IoIosSearch } from "react-icons/io";
+import { RiVideoAddLine } from "react-icons/ri";
+import { FiBell } from "react-icons/fi";
+import { CgClose } from "react-icons/cg";
+
 import { Context } from '../context/contextApi';
 import Loader from '../shared/Loader';
 
@@ -32,9 +38,14 @@ const Navbar = () => {
 
       <div className='flex h-5 items-center'>
         {pageName !== "video" && (
-          <div 
-          className='flex md:hidden md:mr-4 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:[#303030]/[0.6]' 
-          onClick={mobileMenuToggle}>
+          <div
+            className='flex md:hidden md:mr-4 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:[#303030]/[0.6]'
+            onClick={mobileMenuToggle}>
+            {mobileMenu ? (
+              <CgClose className='text-white text-xl' />
+            ) : (
+              <SlMenu className='text-white text-xl' />
+            )}
           </div>
         )}
       </div>
