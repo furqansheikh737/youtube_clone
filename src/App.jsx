@@ -1,7 +1,7 @@
 import React from 'react'
 import {AppContext} from './context/contextApi'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Feed, Navbar, SearchResult, VideoDetails } from './components/index'
+import { Feed, Navbar, SearchResult, VideoDetails} from "./components/index"
 const App = () => {
   return (
     <AppContext>
