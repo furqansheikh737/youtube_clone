@@ -6,5 +6,6 @@ import SearchResult from "./SearchResult";
 import SuggestionVideoCard from "./SuggestionVideoCard";
 import VideoCard from "./VideoCard";
 import LeftNavMenuItem from "./LeftNavMenuItem";
+import SearchResultVideoCard from "./SearchResultVideoCard"
 
-export {Navbar, SearchResult, LeftNav, Feed, SuggestionVideoCard, VideoCard, VideoDetails, LeftNavMenuItem};
+export {Navbar, SearchResult, LeftNav, Feed, SuggestionVideoCard, VideoCard, VideoDetails, LeftNavMenuItem, SearchResultVideoCard};
