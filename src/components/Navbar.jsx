@@ -29,8 +29,8 @@ const Navbar = () => {
     setMobileMenu(!mobileMenu)
   }
 
-  const { pathName } = useLocation();
-  const pageName = pathName?.split("/")?.filter(Boolean)?.[0];
+  const { pathname } = useLocation();
+  const pageName = pathname?.split("/")?.filter(Boolean)?.[0];
 
   return (
     <div className='flex flex-row items-center justify-between sticky top-0 z-10 h-14 px-4 md:px-5 bg-white dark:bg-black'>
@@ -63,6 +63,7 @@ const Navbar = () => {
             className='bg-transparent outline-none text-white pr-5 pl-5 md:pl-0 w-44 md:group-focus-within:pl-0 md:w-64 lg:w-[500px]'
             onChange={(e) => setSearchQuery(e.target.value)}
             onKeyUp={searchQueryHandler}
+            placeholder="Search"
             value={searchQuery}
           />
         </div>

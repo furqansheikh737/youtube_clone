@@ -5,13 +5,13 @@ export const Context = createContext();
 
 export const AppContext = (props) => {
     const [loading, setLoading] = useState(false);
-    const [searchResults, setSearchResults] = useState(false);
-    const [selectCategories, setSelectCategories] = useState("New");
+    const [searchResults, setSearchResults] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState("New");
     const [mobileMenu, setMobileMenu] = useState(false);
 
     useEffect(() => {
-        fetchSelectCategoryData(selectCategories)
-    }, [setSelectCategories])
+        fetchSelectCategoryData(selectedCategory)
+    }, [selectedCategory])
 
     const fetchSelectCategoryData = (query) => {
         setLoading(true);
@@ -23,7 +23,7 @@ export const AppContext = (props) => {
     }
 
     return (
-        <Context.Provider value={{ loading, setLoading, searchResults, selectCategories, setSelectCategories, mobileMenu, setMobileMenu }}>
+        <Context.Provider value={{ loading, setLoading, searchResults, selectedCategory, setSelectedCategory, mobileMenu, setMobileMenu }}>
             {props.children}
         </Context.Provider>
     )
