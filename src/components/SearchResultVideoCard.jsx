@@ -6,7 +6,7 @@ import VideoLength from '../shared/VideoLength'
 
 const SearchResultVideoCard = ({ video }) => {
   return (<Link to={`/video/${video?.videoId}`}>
-    <div className="felx flex-col md:flex-row mb-8 md:mb-3 lg:hover:bg-white/[0.1] rounded-xl md:p-4">
+    <div className="  md:flex mb-8 md:mb-3 lg:hover:bg-white/[0.1] rounded-xl md:p-4">
       <div className="relative flex shrink-0 h-48 md:h-28 lg:h-40 xl:h-48 w-full md:w-48 lg:w-64 xl:w-80 rounded-xl bg-slate-800 overflow-hidden">
         <img
           className="h-full w-full object-cover"
@@ -20,10 +20,10 @@ const SearchResultVideoCard = ({ video }) => {
         <span className="text-lg md:text-2xl font-semibold line-clamp-2 text-white">
           {video?.title}
         </span>
-        <span className="empty:hidden text-sm line-clamp-1 md:line-clamp-2 text-white/[0.7] md:pr-24 md:my-4">
+        <span className="empty:hidden text-sm line-clamp-1 md:line-clamp-2 text-white/[0.7] md:pr-24 md:my-1">
           {video?.descriptionSnippet}
         </span>
-        <div className="hidden md:flex items-center">
+        <div className="flex md:flex items-center">
           <div className="flex items-start mr-3">
             <div className="flex h-9 w-9 rounded-full overflow-hidden">
               <img
