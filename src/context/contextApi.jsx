@@ -19,13 +19,12 @@ export const AppContext = (props) => {
             console.log(contents);
             setSearchResults(contents);
             setLoading(false);
-        })
-    }
+        });
+    };
 
     return (
         <Context.Provider value={{ loading, setLoading, searchResults, selectedCategory, setSelectedCategory, mobileMenu, setMobileMenu }}>
             {props.children}
         </Context.Provider>
-    )
-
-}
+    );
+};

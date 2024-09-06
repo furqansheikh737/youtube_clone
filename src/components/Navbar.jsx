@@ -39,7 +39,7 @@ const Navbar = () => {
       <div className='flex h-5 items-center'>
         {pageName !== "video" && (
           <div
-            className='flex md:hidden md:mr-4 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:[#303030]/[0.6]'
+            className='flex md:hidden md:mr-6 cursor-pointer items-center justify-center h-10 w-10 rounded-full hover:[#303030]/[0.6]'
             onClick={mobileMenuToggle}>
             {mobileMenu ? (
               <CgClose className='text-white text-xl' />

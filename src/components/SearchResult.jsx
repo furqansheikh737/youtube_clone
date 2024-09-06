@@ -34,7 +34,7 @@ const SearchResult = () => {
         <div className='grid grid-cols-1 gap-2 p-5'>
           {result?.map((item) => {
             if (item?.type !== "video") return false;
-            let video = item?.video
+            let video = item.video
             return (
               <SearchResultVideoCard
                 key={video?.videoId}
@@ -45,7 +45,7 @@ const SearchResult = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default SearchResult
